@@ -8,54 +8,96 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Akaya Telivigala', cursive;
+    background: rgb(196,224,249, );
+    background: radial-gradient(circle, rgba(196,224,249,.6) 30%, rgba(103,170,249,.6) 34%, rgba(185,95,137,.6) 40%);
+
     
     
+}
+h1{
+    color: hotpink;
+    font-size: 30px;
+    width: 100%;
+    margin-left: 10vw;
+
+}
+h3{
+    position: absolute;
+    top: 0;
+
+
 }
 .msg    {
-    border: 1px solid black;
-    width: 50vw;
-    height: 10vw;
+    border: .2px dotted grey;
+    width: 40vw;
+    height: 14vmax;
+    margin: -39px 0 10px 0;
+    text-align: center;
+    color: teal;
+    font-size: 40px;
 }
 .grid   {
-    border: 1px solid black;
-    height: 60vh;
-    width: 80vw;
+    
+    height: auto;
+    width: 35vw;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    
+}
+.grid img{
+    
+    
+    width: 100%;
+   
 }
 
 .display{
-    height: 10vh;
-    width: 80vw;
-    border: 1px solid black;
-    display: flex;
-    margin: 20px 0 ;
+    height: 8vh;
+    width: 70vw;
+    border: 1px solid yellow;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    margin: 10px 0 ;
+    border-radius: 60px;
 }
 .display>div{
-    display: row;
+    border: 1px solid yellowgreen;
+    border-radius: 60px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
     
     
 }
 .keyboard   {
     height: 60%;
     width: 80vw;
-    border: 1px solid black;
+    border: 1px dotted yellow;
     display: grid;
     grid-template-columns: repeat(7, auto) ;
     grid-template-rows: repeat(4, auto);
     margin: 10px 0 ;
+    border-radius: 10px;
+    
     
 }
 .keyboard > div{
-    border: 1px solid red;
+    border: 1px solid navy;
+    border-radius: 10px;
+    color: white;
+    font-size: 160%;
+    padding: 0px 10px 5px 10px;
     
     
     
 }   
 .fill1{
-    background-color: red;
+    background: pink;
 }
 .fill2{
-    background: black;
+    background: hotpink;
 }
 .replay{
-    margin: 20px 0 ;
+    margin: 10px 0 ;
 }
