@@ -76,7 +76,7 @@ function handle(evt){
     
 
     
-    //if winner return
+    
     
    
     //if all chosen letters within word have been chosen winner=true
@@ -123,21 +123,25 @@ function render(){
                 document.getElementById(`l${idx}`).innerText = letter;
             }
         });
-        console.log(word.split(''))
-
-
+        document.getElementById('movesLeft').innerText= `${movesLeft} moves left`;
         
         
-        
-    
-    
-        
-        
-        
-        
-
         //if winner show message 
-        //show how many moves are left
+
+
+
+
+        
         //show images in relation to gueses left 
-        //render the message
+        
+    
+        
+        
+        
+        
+
+        
+        
+        
+        
     }
