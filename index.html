@@ -12,54 +12,54 @@
 </head>
 <body>
     <h1>Guess The word!</h1>
-    <h3 class="turnsLeft">Hello!</h3>
-    <h2 class="msg">Lets play a little game</h2>
+    <h3 id="turnsLeft">Hello!</h3>
+    <h2 id="msg">Lets play a little game</h2>
     
     <div class="grid">
-        <img src="https://i.imgur.com/EddgQuD.jpg" alt="">
-        <img src="https://i.imgur.com/fNPJAwr.jpg" alt="">
-        <img src="https://i.imgur.com/oRRjqMz.jpg" alt="">
-        <img src="https://i.imgur.com/A5KySf6.jpg" alt="">
-        <img src="https://i.imgur.com/cyRhtwR.jpg" alt="">
-        <img src="https://i.imgur.com/EwFOZDP.jpg" alt="">
+        <div id="0"></div>
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
     </div>
     <div class="display">
-        <div class="l1"></div>
-        <div class="l2"></div>
-        <div class="l3"></div>
-        <div class="l4"></div>
-        <div class="l5"></div>
-        <div class="l6"></div>
+        <div id="l0"></div>
+        <div id="l1"></div>
+        <div id="l2"></div>
+        <div id="l3"></div>
+        <div id="l4"></div>
+        <div id="l5"></div>
+        <!-- if the letter in the word is in the chosen letters array then set inner text for div  -->
     </div>
     <div class="keyboard">
-        <div class="a">a</div>
-        <div class="b">b</div>
-        <div class="c">c</div>
-        <div class="d">d</div>
-        <div class="e">e</div>
-        <div class="f">f</div>
-        <div class="g">g</div>
-        <div class="h">h</div>
-        <div class="i">i</div>
-        <div class="j">j</div>
-        <div class="k">k</div>
-        <div class="l">l</div>
-        <div class="m">m</div>
-        <div class="n">n</div>
-        <div class="o">o</div>
-        <div class="p">p</div>
-        <div class="q">q</div>
-        <div class="r">r</div>
-        <div class="s">s</div>
-        <div class="t">t</div>
-        <div class="u">u</div>
-        <div class="v">v</div>
-        <div class="w">w</div>
-        <div class="x">x</div>
-        <div class="y">y</div>
-        <div class="z">z</div>
-        <div class="fill1"></div>
-        <div class="fill2"></div>
+        <button id="a">a</button>
+        <button id="b">b</button>
+        <button id="c">c</button>
+        <button id="d">d</button>
+        <button id="e">e</button>
+        <button id="f">f</button>
+        <button id="g">g</button>
+        <button id="h">h</button>
+        <button id="i">i</button>
+        <button id="j">j</button>
+        <button id="k">k</button>
+        <button id="l">l</button>
+        <button id="m">m</button>
+        <button id="n">n</button>
+        <button id="o">o</button>
+        <button id="p">p</button>
+        <button id="q">q</button>
+        <button id="r">r</button>
+        <button id="s">s</button>
+        <button id="t">t</button>
+        <button id="u">u</button>
+        <button id="v">v</button>
+        <button id="w">w</button>
+        <button id="x">x</button>
+        <button id="y">y</button>
+        <button id="z">z</button>
+        
     </div>
     <button class="replay">Play Again!</button>
 

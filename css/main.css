@@ -20,6 +20,7 @@ h1{
     font-size: 30px;
     width: 100%;
     margin-left: 10vw;
+    text-shadow: teal;
 
 }
 h3{
@@ -28,8 +29,8 @@ h3{
 
 
 }
-.msg    {
-    border: .2px dotted grey;
+#msg    {
+   
     width: 40vw;
     height: 14vmax;
     margin: -39px 0 10px 0;
