@@ -4,18 +4,13 @@ const words = ['donkey', 'monkey', 'fought', 'hungry', 'covers', 'friend'];
 //image to display at the end
 
 
-
-
-
 /*----- app's state (variables) -----*///
 
 //I want to check whether I have or winner or not
-let winner, chosenLetters, movesLeft, word ;
+let winner, chosenLetters, movesLeft, word, rightGuesses;
 
 //array of letters guessed wrong and one of right
 //disable buttons in render when they get it wrong
-
-
 
 /*----- cached element references -----*/
 
@@ -24,11 +19,6 @@ const replayBtn = document.querySelector('.replay');
 
 const keyboard = document.querySelectorAll('.keyboard > button')
 const display = document.querySelectorAll('.display > div')
-
-
-
-
-
 
 
 /*----- event listeners -----*/
@@ -76,17 +66,15 @@ function handle(evt){
             
         };
         };
+    getGuessesRight();
+    function getGuessesRight() { 
+        if (word.includes(letter)){
+            (rightGuesses++);
+            console.log(rightGuesses)
+        }
+    };
     
     
-    //if chosen letters carries all of the strings in word declare winner
-    //array iterator every -convert word into array
-    
-    
-
-    
-    
-   
-    //if all chosen letters within word have been chosen winner=true
     
     
     render(); 
@@ -98,6 +86,7 @@ function init(){
     winner = null;
     movesLeft = 6;
     chosenLetters = [];
+    rightGuesses = 0;
         
     word =words[Math.floor(Math.random()*6)];
     //randomize after same word is working
@@ -105,14 +94,7 @@ function init(){
 
 }
 // isThereWinner();
-//check out shaws example
-    //if chosen letters carries all of the strings in word declare winner
-    //array iterator every -convert word into array
-    // are chosen letters in word
-// function isThereWinner(){
-//     if display =
-// }
-    // word.every();
+
 function render(){
     //rendering the board
         //reset the color of all the buttons to whites
@@ -133,7 +115,7 @@ function render(){
     if (winner == true){
         document.getElementById('msg').textContent = 'You win🥵';
     }
-    //check out shaws example
+    
     //if chosen letters carries all of the strings in word declare winner
     //array iterator every -convert word into array
     // are chosen letters in word
@@ -178,14 +160,9 @@ function render(){
         document.getElementById(`${movesLeft}`).style.visibility = 'hidden';
         
     };
-     
-        
-        
-        
-        
-
-        
-        
-        
-        
-    
+    // getWinner();
+    // function getWinner () {
+    //     if (rightGuesses == 6){
+    //         winner = true;
+    //     };
+    // };
