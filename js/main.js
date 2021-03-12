@@ -1,14 +1,7 @@
 /*----- constants -----*/
 const words = ['donkey', 'monkey', 'fought', 'hungry', 'covers', 'friend'];
-const images = {
-    0: "url('https://i.imgur.com/EddgQuD.jpg')",
-    1: "url('https://i.imgur.com/fNPJAwr.jpg')",
-    2 : "url('https://i.imgur.com/oRRjqMz.jpg')",
-    3 : "url('https://i.imgur.com/A5KySf6.jpg')",
-    4 : "url('https://i.imgur.com/cyRhtwR.jpg')",
-    5 : "url('https://i.imgur.com/EwFOZDP.jpg')",
-    
-} 
+
+
 
 
 
@@ -69,28 +62,37 @@ function handle(evt){
         
     };
     
-    console.log(movesLeft);
+    
     //if chosen letters carries all of the strings in word declare winner
     //array iterator every -convert word into array
-    
+    getWinner();
     
 
-    
     
     
    
     //if all chosen letters within word have been chosen winner=true
     
     
-    render();
+    render(); 
+}
+
+function getWinner(){
+    let wordSplit = word
+    //if my chosen letters are inside my chosen word declare winner
+    if (chosenLetters.includes(wordSplit)){
+        console.log('yo')
+    }
+    console.log(wordSplit.includes(chosenLetters))
+    console.log(wordSplit)
 }
 function init(){
-    console.log('hello world game isstarting')
+    
     winner = null;
     movesLeft = 6;
     chosenLetters = [];
         
-    word = words[0];
+    word = Math.floor(Math.random() *words[0]);
     //randomize after same wor dis working
     render();
 
@@ -127,14 +129,18 @@ function render(){
         
         
         //if winner show message 
-
-
-
+        if (winner == true){
+            document.getElementById('msg').textContent = 'You win🥵';
+        }
 
         
-        //show images in relation to gueses left 
+
         
-    
+        //hide images in relation to gueses left 
+        
+        document.getElementById(`${movesLeft}`).style.visibility = 'hidden';
+        
+        
         
         
         

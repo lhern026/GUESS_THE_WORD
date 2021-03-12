@@ -44,12 +44,13 @@ h3{
     width: 35vw;
     display: grid;
     grid-template-columns: repeat(3,auto);
+    border: 10 px solid red;
     
 }
 .grid img{
-    
-    
     width: 100%;
+    
+    
    
 }
 
