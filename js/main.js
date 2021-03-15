@@ -26,13 +26,16 @@ document.querySelector('.keyboard')
     .addEventListener('click', handle);
     
     
-replayBtn.addEventListener('click', init);
+// replayBtn.addEventListener('click', init);
+replayBtn.addEventListener("click", replay);
     
 
 
 /*----- functions -----*/
 init();
-
+function replay(e){
+    e.target = window.location.reload();
+}
 function handle(evt){
     // A marker has been clicked, update all
   // impacted state, call render
@@ -70,7 +73,7 @@ function handle(evt){
     function getGuessesRight() { 
         if (word.includes(letter)){
             (rightGuesses++);
-            console.log(rightGuesses)
+            
         }
     };
     
@@ -91,9 +94,14 @@ function init(){
     word =words[Math.floor(Math.random()*6)];
     //randomize after same word is working
     render();
+    
 
+};
+function getWinner(){
+    if (rightGuesses === 6){
+        winner = true;
+    }
 }
-// isThereWinner();
 
 function render(){
     //rendering the board
@@ -110,7 +118,7 @@ function render(){
     // document.getElementById('5').style.visibility = '';
     
 
-
+    getWinner();
     //display if they win
     if (winner == true){
         document.getElementById('msg').textContent = 'You win🥵';
@@ -160,9 +168,4 @@ function render(){
         document.getElementById(`${movesLeft}`).style.visibility = 'hidden';
         
     };
-    // getWinner();
-    // function getWinner () {
-    //     if (rightGuesses == 6){
-    //         winner = true;
-    //     };
-    // };
+   
